@@ -5,13 +5,23 @@
   <groupId>fdm</groupId>
   <artifactId>ticketbooking</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
-
-  <name>ticketbooking</name>
-  <url>http://maven.apache.org</url>
+  <packaging>war</packaging>
+<build>
+	<plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-war-plugin</artifactId>
+			<version>2.6</version>
+		<configuration>
+			<failOnMissingWebXml>false</failOnMissingWebXml>
+		</configuration>
+		</plugin>
+	</plugins>
+</build>
 
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  	<maven.compiler.source>1.8</maven.compiler.source>
+  	<maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -37,28 +47,5 @@
 	    <version>1.2</version>
 	</dependency>
   </dependencies>
-  <build>
-    <finalName>FDMEvents</finalName>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.2</version>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.tomcat.maven</groupId>
-          <artifactId>tomcat7-maven-plugin</artifactId>
-          <version>2.2</version>
-          <configuration>
-            <url>http://localhost:8088/manager/text</url>
-            <username>admin</username>
-            <password></password>
-          </configuration>
-      </plugin>
-   </plugins>
-  </build>
+
 </project>
