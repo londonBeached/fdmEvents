@@ -11,6 +11,10 @@ public class User {
 	public String gender;
 	public Date dob;
 	
+	public User(){
+		super();
+	}
+	
 	public User(String email, String password, String firstName, String lastName, String gender, Date dob) {
 		super();
 		this.email = email;
