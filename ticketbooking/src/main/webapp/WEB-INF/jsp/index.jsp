@@ -17,7 +17,7 @@
 			<div class="jumbotron"> 
 				<h1> ${greeting} </h1> 
 				<p> ${tagline} </p> 
-				<a href="signup" class="btn btn-primary">Sign Up</a>
+				<a href="signup" class="btn btn-primary btn-lg">Sign Up</a>
 			</div> 
 		</div>
 	</div>
