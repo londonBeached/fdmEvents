@@ -5,13 +5,23 @@
   <groupId>fdm</groupId>
   <artifactId>ticketbooking</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
-
-  <name>ticketbooking</name>
-  <url>http://maven.apache.org</url>
+  <packaging>war</packaging>
+<build>
+	<plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-war-plugin</artifactId>
+			<version>2.6</version>
+		<configuration>
+			<failOnMissingWebXml>false</failOnMissingWebXml>
+		</configuration>
+		</plugin>
+	</plugins>
+</build>
 
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  	<maven.compiler.source>1.8</maven.compiler.source>
+  	<maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -21,5 +31,46 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-webmvc</artifactId>
+	    <version>4.3.5.RELEASE</version>
+	</dependency>
+	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>javax.servlet-api</artifactId>
+	    <version>3.1.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>jstl</artifactId>
+	    <version>1.2</version>
+	</dependency>
+		<dependency>
+           <groupId>com.oracle</groupId>
+           <artifactId>ojdbc6</artifactId>
+           <version>11.2.0</version>
+       </dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>4.3.0.RELEASE</version>
+		</dependency>
+		<dependency>
+           <groupId>org.hibernate</groupId>
+            <artifactId>hibernate</artifactId>
+                 <version>3.2.6.ga</version>
+       	 </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-annotations</artifactId>
+                 <version>3.4.0.ga</version>
+        </dependency>
+        <dependency>
+               <groupId>org.hibernate</groupId>
+               <artifactId>hibernate-commons-annotations</artifactId>
+               <version>3.3.0.ga</version>
+        </dependency>
   </dependencies>
+
 </project>
